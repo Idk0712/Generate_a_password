@@ -1,0 +1,48 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Test</title>
+    <style>
+        *{
+            font-family: consolas, monospace;
+        }
+        body{
+            background-color: black;
+            color: white;
+            text-align: center;
+        }
+        button{
+            cursor: pointer;
+            background-color: black;
+            color: white;
+            border: none;
+        }
+        input{
+            font-size: 30px;
+            border: none;
+            border-bottom: 2px solid purple;
+            background-color: black;
+            color: white;
+            outline: none;
+        }
+        input:focus{
+            border: none;
+            border-bottom: 2px solid purple;
+        }
+        h1{
+            color: white;
+        }
+    </style>
+</head>
+<body>
+    <h1 class="title">Password generator, click</h1>
+    <h1 onclick="generatePassword();" style="cursor: pointer; background-color: yellow; color: black; width: 100px; position: relative; left: 48%">here</h1>
+    <h1>to generate a password</h1>
+    <input type="text" maxlength="28">
+    <button style="font-size: 50px" class="copyButton">Copy password</button>
+    <script src="index.js"></script>
+</body>
+</html>
