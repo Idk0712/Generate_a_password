@@ -19,7 +19,6 @@ const things = {
     ["numbers"]: ["0", "1", "2", "3", "4", "5", "6", "7", "8", "9"],
     ["symbols"]: ["$", "<", ">", "^", "*", "~", "`", "ù", "%", "!", "?", ";", ",", "¤", "£", "_", "-", "/", "&", "#", `"`, `'`, "{", "}", "[", "]", "@", "ç", "(", ")", "!", "§"]
 };
-//pls refresh
 password.addEventListener("keydown", dodgeWriting);
 function dodgeWriting(e){
     e.preventDefault();
