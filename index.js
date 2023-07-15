@@ -12,69 +12,13 @@ const random = Math.random;
 const title = doc.querySelector(".title");
 const password = doc.querySelector("input");
 const copyButton = doc.querySelector(".copyButton");
-const Arrays = ["Random1",
-"Random2",
-"Random3",
-"Random4",
-"Random1",
-"Random2",
-"Random3",
-"Random4",
-"Random5",
-"Random6",
-"Random7",
-"Random8",
-"Random9",
-"Random10",
-"Random11",
-"Random12",
-"Random13",
-"Random14",
-"Random15",
-"Random16",
-"Random17",
-"Random18",
-"Random19",
-"Random20",
-"Random21",
-"Random22",
-"Random23",
-"Random24",
-"Random25",
-"Random26",
-"Random27",
-"Random28",
-"Random29",
-"Random30",
-"Random31",
-"Random32",
-"Random33",
-"Random34",
-"Random35",
-"Random36",
-"Random37",
-"Random38",
-"Random39",
-"Random40",
-"Random41",
-"Random42",
-"Random43",
-"Random44",
-"Random45",
-"Random46",
-"Random47",
-"Random48"
-];
+const Arrays = ["Random1","Random2","Random3","Random4","Random1","Random2","Random3","Random4","Random5","Random6","Random7","Random8","Random9","Random10","Random11","Random12","Random13","Random14","Random15","Random16","Random17","Random18","Random19","Random20","Random21","Random22","Random23","Random24","Random25","Random26","Random27","Random28","Random29","Random30","Random31","Random32","Random33","Random34","Random35","Random36","Random37","Random38","Random39","Random40","Random41","Random42","Random43","Random44","Random45","Random46","Random47","Random48"];
 const things = {
     ["letters"]: ["a", "b", "c", "d", "e", "f", "g", "h", "i", "j", "k", "l", "m", "n", "o", "p", "q", "r", "s", "t", "u", "v", "w", "x", "y", "z"],
     ["Letters"]: ["A", "B", "C", "D", "E", "F", "G", "H", "I", "J", "K", "L", "M", "N", "O", "P", "Q", "R", "S", "T", "U", "V", "W", "X", "Y", "Z",],
     ["numbers"]: ["0", "1", "2", "3", "4", "5", "6", "7", "8", "9"],
     ["symbols"]: ["$", "<", ">", "^", "*", "~", "`", "ù", "%", "!", "?", ";", ",", "¤", "£", "_", "-", "/", "&", "#", `"`, `'`]
 };
-const Random1 = things.letters[floor(random() * things.letters.length)];
-const Random2 = things.Letters[floor(random() * things.letters.length)];
-const Random3 = things.numbers[floor(random() * things.numbers.length)];
-const Random4 = things.symbols[floor(random() * things.symbols.length)];
 const Random = {
     ["Random1"]: things.letters[floor(random() * things.letters.length)],
     ["Random2"]: things.letters[floor(random() * things.letters.length)],
