@@ -1,6 +1,18 @@
 const doc = document;
 const body = doc.body;
 const head = doc.head;
+function query(element){
+    return doc.querySelector(element);
+};
+function id(element){
+    return doc.getElementById(element);
+};
+function classes(element){
+    return doc.getElementsByClassName(element);
+};
+function all(element){
+    return doc.querySelectorAll(element);
+};
 const sqrt = Math.sqrt;
 const floor = Math.floor;
 const ceil = Math.ceil;
@@ -9,9 +21,9 @@ const warn = console.warn;
 const clear = console.clear;
 const round = Math.round;
 const random = Math.random;
-const title = doc.querySelector(".title");
-const password = doc.querySelector("input");
-const copyButton = doc.querySelector(".copyButton");
+const title = query(".title");
+const password = query("input");
+const copyButton = query(".copyButton");
 const Arrays = ["Random1","Random2","Random3","Random4","Random1","Random2","Random3","Random4","Random5","Random6","Random7","Random8","Random9","Random10","Random11","Random12","Random13","Random14","Random15","Random16","Random17","Random18","Random19","Random20","Random21","Random22","Random23","Random24","Random25","Random26","Random27","Random28","Random29","Random30","Random31","Random32","Random33","Random34","Random35","Random36","Random37","Random38","Random39","Random40","Random41","Random42","Random43","Random44","Random45","Random46","Random47","Random48"];
 const things = {
     ["letters"]: ["a", "b", "c", "d", "e", "f", "g", "h", "i", "j", "k", "l", "m", "n", "o", "p", "q", "r", "s", "t", "u", "v", "w", "x", "y", "z"],
