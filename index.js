@@ -19,6 +19,10 @@ const things = {
     ["numbers"]: ["0", "1", "2", "3", "4", "5", "6", "7", "8", "9"],
     ["symbols"]: ["$", "<", ">", "^", "*", "~", "`", "ù", "%", "!", "?", ";", ",", "¤", "£", "_", "-", "/", "&", "#", `"`, `'`, "{", "}", "[", "]", "@", "ç", "(", ")", "!", "§"]
 };
+password.addEventListener("keydown", dodgeWriting);
+function dodgeWriting(e){
+    e.preventDefault();
+};
 const Random = {
     ["Random1"]: things.letters[floor(random() * things.letters.length)],
     ["Random2"]: things.letters[floor(random() * things.letters.length)],
