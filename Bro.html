@@ -1,5 +1,5 @@
 <!DOCTYPE html>
-<html lang="en">
+<html>
 <head>
     <meta charset="UTF-8">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
@@ -13,13 +13,16 @@
         body{
             background-color: black;
             color: white;
-            text-align: center;
         }
         button{
             cursor: pointer;
             background-color: black;
             color: white;
             border: none;
+            pointer-events: all;
+        }
+        select{
+            pointer-events: all;
         }
         input{
             font-size: 30px;
@@ -31,6 +34,7 @@
             background-color: black;
             color: white;
             outline: none;
+            pointer-events: all;
         }
         input:focus{
             border: none;
@@ -42,15 +46,37 @@
         h1{
             color: white;
         }
+        .passwordGenerator{
+            text-align: center;
+        }
     </style>
 </head>
 <body>
-    <h1 class="title">Password generator, click</h1>
-    <h1 onclick="generatePassword();" style="cursor: pointer; background-color: yellow; color: black; width: 100px; position: relative; left: 48%"><u>here</u></h1>
-    <h1>to generate a password</h1>
-    <input placeholder="Password gon' be here" type="text" maxlength="28">
-    <br>
-    <button style="font-size: 50px; border: 2px dotted purple; margin: 8px" class="copyButton">Copy password</button>
+    <h1 style="text-align: center;">Password generator</h1>
+    <div class="advancedThings" style="position: relative; top: -65px; pointer-events: none;">
+        <h1>Advanced option</h1>
+        <h2>How many characters ?</h2>
+        <select class="passwordLength" style="outline: none;">
+            <option value="8"></option>
+            <option value="12"></option>
+            <option value="16"></option>
+            <option value="20"></option>
+            <option value="24"></option>
+            <option value="28"></option>
+            <option value="35" selected></option>
+            <option value="40"></option>
+            <option value="45"></option>
+            <option value="50"></option>
+        </select>
+    </div>
+    <div class="passwordGenerator" style="pointer-events: none;">
+        <h1>Click</h1>
+        <button onclick="generatePassword();" style="cursor: pointer; background-color: yellow; color: black; width: 100px; position: relative; height: 30px; font-size: 25px">here</button>
+        <h1>to generate a password</h1>
+        <input placeholder="Password gon' be here" type="text" maxlength="28">
+        <br>
+        <button style="font-size: 50px; border: 2px dotted purple; margin: 8px" class="copyButton">Copy password</button>
+    </div>
     <script src="index.js"></script>
 </body>
 </html>
