@@ -9,6 +9,7 @@
     <style>
         *{
             font-family: consolas, monospace;
+            user-select: none;
         }
         body{
             background-color: black;
@@ -73,7 +74,7 @@
         <h1>Click</h1>
         <button onclick="generatePassword();" style="cursor: pointer; background-color: yellow; color: black; width: 100px; position: relative; height: 30px; font-size: 25px">here</button>
         <h1>to generate a password</h1>
-        <input placeholder="Password gon' be here" type="text" maxlength="28">
+        <input placeholder="Password gon' be here" type="text" maxlength="28" style="user-select: all;">
         <br>
         <button style="font-size: 50px; border: 2px dotted purple; margin: 8px" class="copyButton">Copy password</button>
     </div>
