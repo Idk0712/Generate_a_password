@@ -49,10 +49,48 @@
         h1{
             color: white;
         }
+        .otherChoicesContainer{
+            background-color: #141414;
+            border: 2px solid whitesmoke;
+            position: relative;
+            top: 5px;
+            width: 500px;
+            height: 150px;
+            text-align: -webkit-left;
+            user-select: all;
+        }
+        .otherChoicesContainer .otherChoices{
+            height: 64%;
+            width: 100%;
+            background-color: #202020;
+        }
+        .otherChoicesContainer .chooseAChoice{
+            background-color: #212121;
+            width: 100%;
+            height: 25%;
+            text-align: -webkit-center;
+            border-bottom: 2px solid white;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+        }
+        .otherChoicesContainer .chooseAChoice button{
+            font-size: x-large;
+            border: 2px solid white;
+            background-color: #303030;
+        }
+        .otherChoicesContainer .chooseAChoice button:active{
+            background-color: #060606;
+        }
+        .otherChoicesContainer .otherChoices span{
+            font-size: 16px;
+        }
         .passwordGenerator{
-            text-align: center;
+            text-align: -webkit-center;
         }
     </style>
+    <script src="sources.js" defer></script>
+    <script src="index.js" defer></script>
 </head>
 <body>
     <h1 style="text-align: center;">Password generator</h1>
@@ -70,6 +108,10 @@
             <option value="40"></option>
             <option value="45"></option>
             <option value="50"></option>
+            <option value="100"></option>
+            <option value="300"></option>
+            <option value="500"></option>
+            <option value="1000"></option>
         </select>
     </div>
     <div class="passwordGenerator" style="pointer-events: none; position: relative; top: -150px">
@@ -77,9 +119,23 @@
         <button onclick="generatePassword();" style="cursor: pointer; background-color: yellow; color: black; width: 100px; position: relative; height: 30px; font-size: 25px">here</button>
         <h1 style="position: relative;">to generate a password</h1>
         <input placeholder="Password gon' be here" type="text" maxlength="28" style="user-select: all; position: relative;">
+        <div class="otherChoicesContainer" style="display: none;">
+            <span>Other choices</span>
+            <div class="otherChoices">
+                <span id="first"></span>
+                <br>
+                <span id="second"></span>
+                <br>
+                <span id="third"></span>
+            </div>
+            <div class="chooseAChoice">
+                <button id="first">Copy #1</button>
+                <button id="second">Copy #2</button>
+                <button id="third">Copy #3</button>
+            </div>
+        </div>
         <br>
-        <button style="font-size: 50px; border: 2px dotted purple; margin: 8px; position: relative;" class="copyButton">Copy password</button>
+        <button style="font-size: 50px; border: 2px dotted purple; margin: 8px; position: relative;" onclick="copyPass()" class="copyButton">Copy password</button>
     </div>
-    <script src="index.js"></script>
 </body>
 </html>
